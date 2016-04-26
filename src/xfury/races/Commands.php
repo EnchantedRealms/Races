@@ -65,7 +65,7 @@ class Commands{
 							return;
 						}
 						$this->plugin->setRace($sender->getName(), 1);
-						$sender->sendMessage(TextFormat::BLUE."[Race] ".TextFormat::GREEN."You are now a jumper!");
+						$sender->sendMessage(TextFormat::GOLD."[Race] ".TextFormat::YELLOW."You are now a jumper!");
 						unset($this->plugin->race[$sender->getName()]);
 					break;
 					case "miner":
