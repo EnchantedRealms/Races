@@ -48,18 +48,18 @@ class Commands{
 							return;
 						}
 						$this->plugin->setRace($sender->getName(), 0);
-						$sender->sendMessage(TextFormat::BLUE."[Race] ".TextFormat::GREEN."You are now a runner!");
+						$sender->sendMessage(TextFormat::GOLD."[Race] ".TextFormat::YELLOW."You are now a runner!");
 						unset($this->plugin->race[$sender->getName()]);
 					break;
 					case "jumper":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::BLUE."[Races] ".TextFormat::RED."Are you sure you want to be a jumper? Once you select your race, you cannot switch it! Type /race jumper again to choose!");
+							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a jumper? Once you select your race, you cannot switch it! Type /race jumper again to choose!");
 							$this->plugin->race[$sender->getName()]["race"] = "jumper";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						if($this->plugin->race[$sender->getName()]["race"] != "jumper"){
-							$sender->sendMessage(TextFormat::BLUE."[Races] ".TextFormat::RED."Are you sure you want to be a jumper? Once you select your race, you cannot switch it! Type /race jumper again to choose!");
+							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a jumper? Once you select your race, you cannot switch it! Type /race jumper again to choose!");
 							$this->plugin->race[$sender->getName()]["race"] = "jumper";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
@@ -70,7 +70,7 @@ class Commands{
 					break;
 					case "miner":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::BLUE."[Races] ".TextFormat::RED."Are you sure you want to be a miner? Once you select your race, you cannot switch it! Type /race miner again to choose!");
+							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a miner? Once you select your race, you cannot switch it! Type /race miner again to choose!");
 							$this->plugin->race[$sender->getName()]["race"] = "miner";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
