@@ -30,20 +30,20 @@ class Commands{
 					return;
 				}
 				if(count($args) != 1){
-					$sender->sendMessage(TextFormat::YELLOW."Usage: /race <runner:jumper:miner>");
+					$sender->sendMessage(TextFormat::YELLOW."Usage: /race <firemage:tank:wizard>");
 					return;
 				}
 				switch(strtolower($args[0])){
 					case "runner":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a runner? Once you select your race, you cannot switch it! Type /race runner again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "runner";
+							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a runner? Once you select your race, you cannot switch it! Type /race flamemage again to choose!");
+							$this->plugin->race[$sender->getName()]["race"] = "flamemage";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
-						if($this->plugin->race[$sender->getName()]["race"] != "runner"){
+						if($this->plugin->race[$sender->getName()]["race"] != "flamemage"){
 							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a runner? Once you select your race, you cannot switch it! Type /race runner again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "runner";
+							$this->plugin->race[$sender->getName()]["race"] = "flamemage";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
@@ -54,13 +54,13 @@ class Commands{
 					case "jumper":
 						if(!isset($this->plugin->race[$sender->getName()])){
 							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a jumper? Once you select your race, you cannot switch it! Type /race jumper again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "jumper";
+							$this->plugin->race[$sender->getName()]["race"] = "tank";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
-						if($this->plugin->race[$sender->getName()]["race"] != "jumper"){
+						if($this->plugin->race[$sender->getName()]["race"] != "tank"){
 							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a jumper? Once you select your race, you cannot switch it! Type /race jumper again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "jumper";
+							$this->plugin->race[$sender->getName()]["race"] = "tank";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
@@ -71,13 +71,13 @@ class Commands{
 					case "miner":
 						if(!isset($this->plugin->race[$sender->getName()])){
 							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a miner? Once you select your race, you cannot switch it! Type /race miner again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "miner";
+							$this->plugin->race[$sender->getName()]["race"] = "wizard";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
-						if($this->plugin->race[$sender->getName()]["race"] != "miner"){
+						if($this->plugin->race[$sender->getName()]["race"] != "wizard"){
 							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a miner? Once you select your race, you cannot switch it! Type /race miner again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "miner";
+							$this->plugin->race[$sender->getName()]["race"] = "wizard";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
