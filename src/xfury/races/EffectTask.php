@@ -25,6 +25,8 @@ class EffectTask extends PluginTask{
 				if($this->plugin->getRace($p->getName()) == 2){
 					$p->addEffect(Effect::getEffect(Effect::REGENERATION)->setDuration(20)->setAmplifier(0)->setVisible(false));
 				}
+	                        if($this->plugin->getRace($p->getName()) == 3){
+					$p->addEffect(Effect::getEffect(Effect::SPEED)->setDuration(20)->setAmplifier(2)->setVisible(false));
 			}
 		}
 	}
