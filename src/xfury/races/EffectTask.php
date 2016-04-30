@@ -23,7 +23,7 @@ class EffectTask extends PluginTask{
 					$p->addEffect(Effect::getEffect(Effect::HEALTH_BOOST)->setDuration(20)->setAmplifier(1)->setVisible(false));
 				}
 				if($this->plugin->getRace($p->getName()) == 2){
-					$p->addEffect(Effect::getEffect(Effect::REGENERATION)->setDuration(20)->setAmplifier(1)->setVisible(false));
+					$p->addEffect(Effect::getEffect(Effect::REGENERATION)->setDuration(20)->setAmplifier(0)->setVisible(false));
 				}
 			}
 		}
