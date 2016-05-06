@@ -42,7 +42,7 @@ class Commands{
 							return;
 						}
 						if($this->plugin->race[$sender->getName()]["race"] != "flamemage"){
-							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a flamemage? Once you select your race, you cannot switch it! Type /race runner again to choose!");
+							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a flamemage? Once you select your race, you cannot switch it! Type /race flamemage again to choose!");
 							$this->plugin->race[$sender->getName()]["race"] = "flamemage";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
@@ -76,7 +76,7 @@ class Commands{
 							return;
 						}
 						if($this->plugin->race[$sender->getName()]["race"] != "wizard"){
-							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a Wizard? Once you select your race, you cannot switch it! Type /race miner again to choose!");
+							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a Wizard? Once you select your race, you cannot switch it! Type /race wizard again to choose!");
 							$this->plugin->race[$sender->getName()]["race"] = "wizard";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
