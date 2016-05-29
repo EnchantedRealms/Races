@@ -1,13 +1,13 @@
-name: RaceChooser
+name: §bRaces
 main: xfury\races\MainClass
-description: Choose your ethnicity!
+description: Choose your fate!
 version: 1.0.0
-author: XFuryMCPE
+author: [XFuryMCPE, GlacierShard92]
 api: [1.13.0, 2.0.0]
 
 commands:
  race:
-  description: Choose your race!
+  description: Choose your /race between Human, Elf, and Bunny
   permission: races.use
 
 permissions:
