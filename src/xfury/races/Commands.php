@@ -30,7 +30,7 @@ class Commands{
 					return;
 				}
 				if(count($args) != 1){
-					$sender->sendMessage(TextFormat::YELLOW."§b§lERPE RACES> §r§c /race <bunny | blaze | elf>");
+					$sender->sendMessage(TextFormat::YELLOW."§b§lERPE RACES> §r§c /race <bunny | miner | elf>");
 					return;
 				}
 				switch(strtolower($args[0])){
@@ -88,7 +88,7 @@ class Commands{
 					default:
 						$sender->sendMessage(TextFormat::GOLD."§7§l>>§r§b RACES: §7§l<<");
 						$sender->sendMessage(TextFormat::YELLOW."§cbunny");
-						$sender->sendMessage(TextFormat::YELLOW."§chuman");
+						$sender->sendMessage(TextFormat::YELLOW."§cminer");
 						$sender->sendMessage(TextFormat::YELLOW."§celf");
 						$sender->sendMessage(TextFormat::YELLOW."§b§lERPE RACES> §4WARNING:§r§c Once your race is chosen, you §eCANNOT§c change your race!");
 					break;
