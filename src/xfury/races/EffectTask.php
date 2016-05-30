@@ -17,7 +17,7 @@ class EffectTask extends PluginTask{
 		foreach($this->plugin->getServer()->getOnlinePlayers() as $p){
 			if($this->plugin->hasRace($p->getName()) == true){
 				if($this->plugin->getRace($p->getName()) == 0){
-					$p->addEffect(Effect::getEffect(Effect::JUMP_BOOST)->setDuration(20)->setAmplifier(1)->setVisible(false));
+					$p->addEffect(Effect::getEffect(Effect::JUMP)->setDuration(20)->setAmplifier(1)->setVisible(false));
 				}
 				if($this->plugin->getRace($p->getName()) == 1){
 					$p->addEffect(Effect::getEffect(Effect::HEALTH_BOOST)->setDuration(20)->setAmplifier(1)->setVisible(false));
