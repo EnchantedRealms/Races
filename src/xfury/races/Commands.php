@@ -36,13 +36,13 @@ class Commands{
 				switch(strtolower($args[0])){
 					case "bunny":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."Are you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm!");
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."Are you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm! You will get a Jump Boost 2 effect!");
 							$this->plugin->race[$sender->getName()]["race"] = "bunny";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						if($this->plugin->race[$sender->getName()]["race"] != "bunny"){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."Are you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm!");
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."Are you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm! You will get a Jump Boost 2 effect!");
 							$this->plugin->race[$sender->getName()]["race"] = "bunny";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
@@ -53,13 +53,13 @@ class Commands{
 					break;
 					case "warrior":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm!");
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm! You will get a Health Boost 2 effect! (4 extra hearts!)");
 							$this->plugin->race[$sender->getName()]["race"] = "warrior";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						if($this->plugin->race[$sender->getName()]["race"] != "warrior"){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm!");
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm! You will get a Health Boost 2 effect! (4 extra hearts!)");
 							$this->plugin->race[$sender->getName()]["race"] = "warrior";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
@@ -70,13 +70,13 @@ class Commands{
 					break;
 					case "elf":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a§e ELF§c? Once you select your race, you §eCANNOT§c change it! Type §e/race elf§c again to confirm!");
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a§e ELF§c? Once you select your race, you §eCANNOT§c change it! Type §e/race elf§c again to confirm! You will get a Speed 2 effect!");
 							$this->plugin->race[$sender->getName()]["race"] = "elf";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						if($this->plugin->race[$sender->getName()]["race"] != "elf"){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a§e ELF§c? Once you select your race, you §eCANNOT§c change it! Type §e/race elf§c again to confirm!");
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a§e ELF§c? Once you select your race, you §eCANNOT§c change it! Type §e/race elf§c again to confirm! You will get a Speed 2 effect!");
 							$this->plugin->race[$sender->getName()]["race"] = "elf";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
