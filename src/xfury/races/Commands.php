@@ -30,7 +30,7 @@ class Commands{
 					return;
 				}
 				if(count($args) != 1){
-					$sender->sendMessage(TextFormat::YELLOW."Usage: /race <bunny | warrior | elf>");
+					$sender->sendMessage(TextFormat::YELLOW."§b§lERPE RACES> §r§c /race <bunny | warrior | elf>");
 					return;
 				}
 				switch(strtolower($args[0])){
@@ -53,7 +53,7 @@ class Commands{
 					break;
 					case "warrior":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACFES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm!");
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm!");
 							$this->plugin->race[$sender->getName()]["race"] = "warrior";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
