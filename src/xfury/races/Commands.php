@@ -22,75 +22,75 @@ class Commands{
 		switch($fcmd){
 			case "race":
 				if(!$sender instanceof Player){
-					$sender->sendMessage(TextFormat::GOLD."[Race] ".TextFormat::YELLOW."Please run this command ingame!");
+					$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cIn-game command only!");
 					return;
 				}
 				if($this->plugin->hasRace($sender->getName()) == true){
-					$sender->sendMessage(TextFormat::GOLD."[Race] ".TextFormat::YELLOW."Your race cannot be changed!");
+					$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§c You §eCANNOT§c change your race!");
 					return;
 				}
 				if(count($args) != 1){
-					$sender->sendMessage(TextFormat::YELLOW."Usage: /race <firemage:tank:wizard>");
+					$sender->sendMessage(TextFormat::YELLOW."Usage: /race <bunny | warrior | elf>");
 					return;
 				}
 				switch(strtolower($args[0])){
-					case "flamemage":
+					case "bunny":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a flamemage? Once you select your race, you cannot switch it! Type /race flamemage again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "flamemage";
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."Are you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm!");
+							$this->plugin->race[$sender->getName()]["race"] = "bunny";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
-						if($this->plugin->race[$sender->getName()]["race"] != "flamemage"){
-							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a flamemage? Once you select your race, you cannot switch it! Type /race flamemage again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "flamemage";
+						if($this->plugin->race[$sender->getName()]["race"] != "bunny"){
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."Are you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm!");
+							$this->plugin->race[$sender->getName()]["race"] = "bunny";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						$this->plugin->setRace($sender->getName(), 0);
-						$sender->sendMessage(TextFormat::GOLD."[Race] ".TextFormat::YELLOW."You are now a flamemage!");
+						$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cThe Enchanted Gods give you the power of... THE BUNNY!");
 						unset($this->plugin->race[$sender->getName()]);
 					break;
-					case "tank":
+					case "warrior":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a tank? Once you select your race, you cannot switch it! Type /race tank again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "tank";
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACFES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm!");
+							$this->plugin->race[$sender->getName()]["race"] = "warrior";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
-						if($this->plugin->race[$sender->getName()]["race"] != "tank"){
-							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a tank? Once you select your race, you cannot switch it! Type /race tank again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "tank";
+						if($this->plugin->race[$sender->getName()]["race"] != "warrior"){
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm!");
+							$this->plugin->race[$sender->getName()]["race"] = "warrior";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						$this->plugin->setRace($sender->getName(), 1);
-						$sender->sendMessage(TextFormat::GOLD."[Race] ".TextFormat::YELLOW."You are now a jumper!");
+						$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cThe Enchanted Gods give you the power of... THE WARRIOR!");
 						unset($this->plugin->race[$sender->getName()]);
 					break;
-					case "wizard":
+					case "elf":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a wizard? Once you select your race, you cannot switch it! Type /race wizard again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "wizard";
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a§e ELF§c? Once you select your race, you §eCANNOT§c change it! Type §e/race elf§c again to confirm!");
+							$this->plugin->race[$sender->getName()]["race"] = "elf";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
-						if($this->plugin->race[$sender->getName()]["race"] != "wizard"){
-							$sender->sendMessage(TextFormat::GOLD."[Races] ".TextFormat::YELLOW."Are you sure you want to be a Wizard? Once you select your race, you cannot switch it! Type /race wizard again to choose!");
-							$this->plugin->race[$sender->getName()]["race"] = "wizard";
+						if($this->plugin->race[$sender->getName()]["race"] != "elf"){
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a§e ELF§c? Once you select your race, you §eCANNOT§c change it! Type §e/race elf§c again to confirm!");
+							$this->plugin->race[$sender->getName()]["race"] = "elf";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						$this->plugin->setRace($sender->getName(), 2);
-						$sender->sendMessage(TextFormat::GOLD."[Race] ".TextFormat::YELLOW."You are now a Wizard!");
+						$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cThe Enchanted Gods give you the power of... THE ELF!");
 						unset($this->plugin->race[$sender->getName()]);
 					break;
 					default:
-						$sender->sendMessage(TextFormat::GOLD."Availible races:");
-						$sender->sendMessage(TextFormat::YELLOW."FlameMage");
-						$sender->sendMessage(TextFormat::YELLOW."Tank");
-						$sender->sendMessage(TextFormat::YELLOW."Wizard");
-						$sender->sendMessage(TextFormat::YELLOW."WARNING: Once your race is chosen, you cannot choose it again!");
+						$sender->sendMessage(TextFormat::GOLD."§7§l>>§r§b RACES: §7§l<<");
+						$sender->sendMessage(TextFormat::YELLOW."§cbunny");
+						$sender->sendMessage(TextFormat::YELLOW."§chuman");
+						$sender->sendMessage(TextFormat::YELLOW."§celf");
+						$sender->sendMessage(TextFormat::YELLOW."§b§lERPE RACES> §4WARNING:§r§c Once your race is chosen, you §eCANNOT§c change your race!");
 					break;
 				}
 			break;
