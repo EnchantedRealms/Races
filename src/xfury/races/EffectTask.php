@@ -24,6 +24,7 @@ class EffectTask extends PluginTask{
 				}
 				if($this->plugin->getRace($p->getName()) == 2){
 					$p->addEffect(Effect::getEffect(Effect::SPEED)->setDuration(20)->setAmplifier(1)->setVisible(false));
+				}
 			}
 		}
 	}
