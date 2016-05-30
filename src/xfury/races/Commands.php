@@ -30,19 +30,19 @@ class Commands{
 					return;
 				}
 				if(count($args) != 1){
-					$sender->sendMessage(TextFormat::YELLOW."§b§lERPE RACES> §r§c /race <bunny | warrior | elf>");
+					$sender->sendMessage(TextFormat::YELLOW."§b§lERPE RACES> §r§c /race <bunny | guardian | elf>");
 					return;
 				}
 				switch(strtolower($args[0])){
 					case "bunny":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."Are you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm! You will get a Jump Boost 2 effect!");
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm! You will get a Jump Boost 2 effect!");
 							$this->plugin->race[$sender->getName()]["race"] = "bunny";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						if($this->plugin->race[$sender->getName()]["race"] != "bunny"){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."Are you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm! You will get a Jump Boost 2 effect!");
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eBUNNY§c? Once you select your race, you §eCANNOT§c change it! Type §e/race bunny§c again to confirm! You will get a Jump Boost 2 effect!");
 							$this->plugin->race[$sender->getName()]["race"] = "bunny";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
@@ -51,21 +51,21 @@ class Commands{
 						$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cThe Enchanted Gods give you the power of... THE BUNNY!");
 						unset($this->plugin->race[$sender->getName()]);
 					break;
-					case "warrior":
+					case "guardian":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm! You will get a Health Boost 2 effect! (4 extra hearts!)");
-							$this->plugin->race[$sender->getName()]["race"] = "warrior";
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race guardian§c again to confirm! You will get a Resistance 2 effect!");
+							$this->plugin->race[$sender->getName()]["race"] = "guardian";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
-						if($this->plugin->race[$sender->getName()]["race"] != "warrior"){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race warrior§c again to confirm! You will get a Health Boost 2 effect! (4 extra hearts!)");
-							$this->plugin->race[$sender->getName()]["race"] = "warrior";
+						if($this->plugin->race[$sender->getName()]["race"] != "guardian"){
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eGUARDIAN§c? Once you select your race, you §eCANNOT§c change it! Type §e/race guardian§c again to confirm! You will get a Resistance 2 effect!");
+							$this->plugin->race[$sender->getName()]["race"] = "guardian";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						$this->plugin->setRace($sender->getName(), 1);
-						$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cThe Enchanted Gods give you the power of... THE WARRIOR!");
+						$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cThe Enchanted Gods give you the power of... THE GUARDIAN!");
 						unset($this->plugin->race[$sender->getName()]);
 					break;
 					case "elf":
