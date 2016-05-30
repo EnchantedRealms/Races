@@ -30,7 +30,7 @@ class Commands{
 					return;
 				}
 				if(count($args) != 1){
-					$sender->sendMessage(TextFormat::YELLOW."§b§lERPE RACES> §r§c /race <bunny | guardian | elf>");
+					$sender->sendMessage(TextFormat::YELLOW."§b§lERPE RACES> §r§c /race <bunny | blaze | elf>");
 					return;
 				}
 				switch(strtolower($args[0])){
@@ -51,21 +51,21 @@ class Commands{
 						$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cThe Enchanted Gods give you the power of... THE BUNNY!");
 						unset($this->plugin->race[$sender->getName()]);
 					break;
-					case "guardian":
+					case "blaze":
 						if(!isset($this->plugin->race[$sender->getName()])){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eWARRIOR§c? Once you select your race, you §eCANNOT§c change it! Type §e/race guardian§c again to confirm! You will get a Resistance 2 effect!");
-							$this->plugin->race[$sender->getName()]["race"] = "guardian";
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eBLAZE§c? Once you select your race, you §eCANNOT§c change it! Type §e/race blazen§c again to confirm! You will get a Fire Resistance 2 effect!");
+							$this->plugin->race[$sender->getName()]["race"] = "blaze";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
-						if($this->plugin->race[$sender->getName()]["race"] != "guardian"){
-							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eGUARDIAN§c? Once you select your race, you §eCANNOT§c change it! Type §e/race guardian§c again to confirm! You will get a Resistance 2 effect!");
-							$this->plugin->race[$sender->getName()]["race"] = "guardian";
+						if($this->plugin->race[$sender->getName()]["race"] != "blaze"){
+							$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cAre you sure you want to be a §eBLAZE§c? Once you select your race, you §eCANNOT§c change it! Type §e/race blaze§c again to confirm! You will get a Fire Resistance 2 effect!");
+							$this->plugin->race[$sender->getName()]["race"] = "blaze";
 							$this->plugin->race[$sender->getName()]["timestamp"] = time();
 							return;
 						}
 						$this->plugin->setRace($sender->getName(), 1);
-						$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cThe Enchanted Gods give you the power of... THE GUARDIAN!");
+						$sender->sendMessage(TextFormat::GOLD."§b§lERPE RACES> ".TextFormat::YELLOW."§r§cThe Enchanted Gods give you the power of... THE BLAZE!");
 						unset($this->plugin->race[$sender->getName()]);
 					break;
 					case "elf":
