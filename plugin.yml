@@ -7,7 +7,7 @@ api: [1.13.0, 2.0.0]
 
 commands:
  race:
-  description: Choose your /race between bunny, warrior or elf!
+  description: Choose your /race between bunny, miner or elf!
   permission: races.use
 
 permissions:
